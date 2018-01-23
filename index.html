@@ -62,6 +62,275 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-mysql基本语句" class="post-mysql基本语句 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/01/23/mysql基本语句/">sql基本语句</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/23/mysql基本语句/" data-id="cjcr75cw50000b1cdc5tlbafl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>SQL 查询语句</p>
+<ul>
+<li>查询语句</li>
+</ul>
+<ol>
+<li><blockquote>
+<p>SELECT 需要查询的字段 FROM ${table} WHERE 查询条件<br><code>* 表示查询全部字段</code><br> ORDER BY 按指定列默认升序排列。 DESC 降序排列<br> ORDER BY column_name DESC</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<ul>
+<li>SQL 函数<br>SUM() 返回指定列的总数<pre><code>* SELECT SUM(column_name) FROM table_name;
+</code></pre>AVG() 返回指定列的平均值<pre><code>* SELECT AVG(column_name) FROM table_name;
+</code></pre>TOP 50 PERCENT * 返回选中百分之前50 的记录<br>COUNT() 函数返回匹配指定条件的行数  <pre><code>* COUNT(*)
+* COUNT(DISTINCT column_name) 返回指定列不同值的数目
+</code></pre>FIRST(column_name) 返回指定列记录的第一个值（只有 MS Access 支持 FIRST() 函数）<pre><code>* SQL Server、MySQL 和 Oracle 中的 SQL FIRST() 工作区
+    * SELECT TOP 1 column_name FROM table_name ORDER BY column_name ASC;
+    * SELECT column_name FROM table_name ORDER BY column_name ASC LIMIT 1;
+    * SELECT column_name FROM table_name ORDER BY column_name ASC WHERE ROWNUM &lt;=1;
+</code></pre>LAST() 返回指定列记录的最后一个值 （只有 MS Access 支持 LAST() 函数）<pre><code>* SELECT LAST(column_name) FROM table_name;
+    * SELECT TOP 1 column_name FROM table_name ORDER BY column_name DESC;
+    * SELECT column_name FROM table_name ORDER BY column_name DESC LIMIT 1;
+    * SELECT column_name FROM table_name ORDER BY column_name DESC WHERE ROWNUM &lt;=1;
+</code></pre>MAX() 返回指定列的最大值<pre><code>* SELECT MAX(column_name) FROM table_name;
+</code></pre>MIN() 返回指定列的最小值<pre><code>* SELECT MIN(column_name) FROM table_name;
+</code></pre>GROUP BY 根据一个或多个列对结果集进行分组<pre><code>* SELECT column_name FROM table_name GROUP BY column_name;
+</code></pre>DISTINCT 返回所选列的不同值 （去重）<pre><code>* SELECT DISTINCT column_name FROM table_name 
+</code></pre>HAVING 函数目前还没有理解。。。！<br>UNIX_TIMESTAMP<pre><code>* MySQL中的UNIX_TIMESTAMP函数有两种类型供调用
+    1. 无参数调用：UNIX_TIMESTAMP() 
+        返回值：自&apos;1970-01-01 00:00:00&apos;的到当前时间的秒数差
+      例子：SELECT UNIX_TIMESTAMP()  =&gt; 1339123415
+  2. 有参数调用：UNIX_TIMESTAMP(date)
+      其中date可以是一个DATE字符串，一个DATETIME字符串，一个TIMESTAMP或者一个当地时间的YYMMDD或YYYMMDD格式的数字
+      返回值：自&apos;1970-01-01 00:00:00&apos;与指定时间的秒数差
+  3. 以下几种格式返回的结果相同：
+      SELECT UNIX_TIMESTAMP(&apos;20120608&apos;);
+      SELECT UNIX_TIMESTAMP(&apos;2012-6-8&apos;);
+      SELECT UNIX_TIMESTAMP(&apos;2012-06-08&apos;);
+</code></pre>CURRENT_DATE() 获取当天日期 返回 YYYY-MM-DD 字符串<br>NOW() 获取当前日期和时间。返回 YYYY-MM-DD hh:mm:ss</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/01/23/mysql基本语句/">
+    <time datetime="2018-01-23T05:24:58.000Z" class="entry-date">
+        2018-01-23
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-redis" class="post-redis post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/01/22/redis/">redis 基础学习 从安装到开发</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/22/redis/" data-id="cjcpwtu3700029lcd13k2tqbg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <ul>
+<li>安装<br>em… 我也不记得我是怎么安装的了，这部分暂且不写<br>就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。</li>
+</ul>
+<hr>
+<ul>
+<li>启动<blockquote>
+<p>redis-server<br>当出现下图时，说明服务已启动<br>1668:M 23 Jan 10:56:01.621 # Server initialized<br>1668:M 23 Jan 10:56:01.622 <em> DB loaded from disk: 0.001 seconds<br>1668:M 23 Jan 10:56:01.622 </em> Ready to accept connections</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<ul>
+<li>启动本地服务<br>默认 6379 端口  通过 –post 可以自定义端口<blockquote>
+<p>redis-server –port 6380</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="通过脚本启动"><a href="#通过脚本启动" class="headerlink" title="* 通过脚本启动"></a>* 通过脚本启动</h2><ul>
+<li>发送命令<br>Redis 通过PING 命令来确定客户端与Redis 是否连接正常，如果连接正常会收到PONG</li>
+<li>命令返回值<blockquote>
+<ul>
+<li>状态回复<ol>
+<li>ok</li>
+</ol>
+</li>
+<li>错误回复<br>  (ERROR)</li>
+<li>整数回复<br>  (integer) 0</li>
+<li>字符串回复<br>  “1”<br>  请求的键值不存在时返回一个空结果<br>  （nil） </li>
+<li>多行字符串返回</li>
+</ul>
+</blockquote>
+</li>
+<li><p>配置</p>
+<ol>
+<li>在不重新启动 Redis 的情况下，动态修改部分Redis配置</li>
+<li>获得当前的配置活动情况 <blockquote>
+<p>CONFIG GET loglevel<br> 1）”loglevel”<br> 2) “warning”<br> 第一行字符串回复的表示选项名 、第二行字符串回复表示选项值<br>SELECT table 切换数据库<br><strong>Redis不支持自定义数据库名，每个数据库都以编号命名，并且不支持分别设置密码，要么能 全部访问，要么一个数据库也访问不了</strong></p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>创建 键 SET key 1</p>
+</li>
+<li>KEYS * 获取所有的键</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/01/22/redis/">
+    <time datetime="2018-01-22T07:47:03.000Z" class="entry-date">
+        2018-01-22
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-webpack" class="post-webpack post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/01/22/webpack/">webpack 学习</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/22/webpack/" data-id="cjcpwtu3c00039lcds9bil1gm" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="webpack-安装"><a href="#webpack-安装" class="headerlink" title="webpack 安装"></a>webpack 安装</h1><ul>
+<li>准备工作<blockquote>
+<p>npm install -g webpack  全局安装<br>npm install –save-dev webpack   安装在该文件夹下</p>
+</blockquote>
+</li>
+<li>新建项目<blockquote>
+<p>新建文件夹 取名 webpack simple</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>在文件夹下新建两个文件夹分别为app 和 public ,app 中放js 代码， public 放打包后的index.html<br>在app 中创建两个文件， main.js 和 greeter.js </p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/01/22/webpack/">
+    <time datetime="2018-01-22T03:10:50.000Z" class="entry-date">
+        2018-01-22
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-how-to-create-a-blog" class="post-how-to-create-a-blog post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/01/19/how-to-create-a-blog/">how to create a blog</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/19/how-to-create-a-blog/" data-id="cjcpwtu3000019lcdufas1mwo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="开启博客之旅"><a href="#开启博客之旅" class="headerlink" title="开启博客之旅"></a>开启博客之旅</h1><h2 id="零基础搭建-Github-免费博客"><a href="#零基础搭建-Github-免费博客" class="headerlink" title="零基础搭建 Github 免费博客"></a>零基础搭建 Github 免费博客</h2><pre><code>作为git 菜鸟，在偷师学艺，搜集了网上n个教程之后，终于成功搭建了第一个Github blog
+并且还找到了一个很文艺少女风的主题～嗯嗯，nice and very good！
+</code></pre>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/01/19/how-to-create-a-blog/">
+    <time datetime="2018-01-19T06:35:22.000Z" class="entry-date">
+        2018-01-19
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="post-hello-world post type-post status-publish format-standard hentry">
     <!---->
 
@@ -77,7 +346,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/19/hello-world/" data-id="cjclgktvy0000bicd0t88zi2t" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/19/hello-world/" data-id="cjcpwtu2s00009lcdynihhens" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -134,6 +403,22 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget-content">
       <ul>
+        
+          <li>
+            <a href="/2018/01/23/mysql基本语句/">sql基本语句</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/22/redis/">redis 基础学习 从安装到开发</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/22/webpack/">webpack 学习</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/19/how-to-create-a-blog/">how to create a blog</a>
+          </li>
         
           <li>
             <a href="/2018/01/19/hello-world/">Hello World</a>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="SQL 查询语句
+
+查询语句
+
+
+
+SELECT 需要查询的字段 FROM ${table} WHERE 查询条件* 表示查询全部字段 ORDER BY 按指定列默认升序排列。 DESC 降序排列 ORDER BY column_name DESC
+
+
+
+
+
+SQL 函数SUM() 返回指定列的总数" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>sql基本语句 | 网瘾少女--小双鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SQL 查询语句  查询语句    SELECT 需要查询的字段 FROM ${table} WHERE 查询条件* 表示查询全部字段 ORDER BY 按指定列默认升序排列。 DESC 降序排列 ORDER BY column_name DESC      SQL 函数SUM() 返回指定列的总数* SELECT SUM(column_name) FROM table_name; AVG() 返">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql基本语句">
+<meta property="og:url" content="http://fzzkiddy.github.io/2018/01/23/mysql基本语句/index.html">
+<meta property="og:site_name" content="网瘾少女--小双鱼">
+<meta property="og:description" content="SQL 查询语句  查询语句    SELECT 需要查询的字段 FROM ${table} WHERE 查询条件* 表示查询全部字段 ORDER BY 按指定列默认升序排列。 DESC 降序排列 ORDER BY column_name DESC      SQL 函数SUM() 返回指定列的总数* SELECT SUM(column_name) FROM table_name; AVG() 返">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-23T06:37:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sql基本语句">
+<meta name="twitter:description" content="SQL 查询语句  查询语句    SELECT 需要查询的字段 FROM ${table} WHERE 查询条件* 表示查询全部字段 ORDER BY 按指定列默认升序排列。 DESC 降序排列 ORDER BY column_name DESC      SQL 函数SUM() 返回指定列的总数* SELECT SUM(column_name) FROM table_name; AVG() 返">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="网瘾少女--小双鱼" rel="home">网瘾少女--小双鱼</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">猫系少女～好养=。= Tiramisu~</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-mysql基本语句" class="post-mysql基本语句 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      sql基本语句
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/23/mysql基本语句/" data-id="cjcr75cw50000b1cdc5tlbafl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>SQL 查询语句</p>
+<ul>
+<li>查询语句</li>
+</ul>
+<ol>
+<li><blockquote>
+<p>SELECT 需要查询的字段 FROM ${table} WHERE 查询条件<br><code>* 表示查询全部字段</code><br> ORDER BY 按指定列默认升序排列。 DESC 降序排列<br> ORDER BY column_name DESC</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<ul>
+<li>SQL 函数<br>SUM() 返回指定列的总数<pre><code>* SELECT SUM(column_name) FROM table_name;
+</code></pre>AVG() 返回指定列的平均值<pre><code>* SELECT AVG(column_name) FROM table_name;
+</code></pre>TOP 50 PERCENT * 返回选中百分之前50 的记录<br>COUNT() 函数返回匹配指定条件的行数  <pre><code>* COUNT(*)
+* COUNT(DISTINCT column_name) 返回指定列不同值的数目
+</code></pre>FIRST(column_name) 返回指定列记录的第一个值（只有 MS Access 支持 FIRST() 函数）<pre><code>* SQL Server、MySQL 和 Oracle 中的 SQL FIRST() 工作区
+    * SELECT TOP 1 column_name FROM table_name ORDER BY column_name ASC;
+    * SELECT column_name FROM table_name ORDER BY column_name ASC LIMIT 1;
+    * SELECT column_name FROM table_name ORDER BY column_name ASC WHERE ROWNUM &lt;=1;
+</code></pre>LAST() 返回指定列记录的最后一个值 （只有 MS Access 支持 LAST() 函数）<pre><code>* SELECT LAST(column_name) FROM table_name;
+    * SELECT TOP 1 column_name FROM table_name ORDER BY column_name DESC;
+    * SELECT column_name FROM table_name ORDER BY column_name DESC LIMIT 1;
+    * SELECT column_name FROM table_name ORDER BY column_name DESC WHERE ROWNUM &lt;=1;
+</code></pre>MAX() 返回指定列的最大值<pre><code>* SELECT MAX(column_name) FROM table_name;
+</code></pre>MIN() 返回指定列的最小值<pre><code>* SELECT MIN(column_name) FROM table_name;
+</code></pre>GROUP BY 根据一个或多个列对结果集进行分组<pre><code>* SELECT column_name FROM table_name GROUP BY column_name;
+</code></pre>DISTINCT 返回所选列的不同值 （去重）<pre><code>* SELECT DISTINCT column_name FROM table_name 
+</code></pre>HAVING 函数目前还没有理解。。。！<br>UNIX_TIMESTAMP<pre><code>* MySQL中的UNIX_TIMESTAMP函数有两种类型供调用
+    1. 无参数调用：UNIX_TIMESTAMP() 
+        返回值：自&apos;1970-01-01 00:00:00&apos;的到当前时间的秒数差
+      例子：SELECT UNIX_TIMESTAMP()  =&gt; 1339123415
+  2. 有参数调用：UNIX_TIMESTAMP(date)
+      其中date可以是一个DATE字符串，一个DATETIME字符串，一个TIMESTAMP或者一个当地时间的YYMMDD或YYYMMDD格式的数字
+      返回值：自&apos;1970-01-01 00:00:00&apos;与指定时间的秒数差
+  3. 以下几种格式返回的结果相同：
+      SELECT UNIX_TIMESTAMP(&apos;20120608&apos;);
+      SELECT UNIX_TIMESTAMP(&apos;2012-6-8&apos;);
+      SELECT UNIX_TIMESTAMP(&apos;2012-06-08&apos;);
+</code></pre>CURRENT_DATE() 获取当天日期 返回 YYYY-MM-DD 字符串<br>NOW() 获取当前日期和时间。返回 YYYY-MM-DD hh:mm:ss</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/01/23/mysql基本语句/">
+    <time datetime="2018-01-23T05:24:58.000Z" class="entry-date">
+        2018-01-23
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/01/22/redis/" rel="next">redis 基础学习 从安装到开发 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/23/mysql基本语句/">sql基本语句</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/22/redis/">redis 基础学习 从安装到开发</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/22/webpack/">webpack 学习</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/19/how-to-create-a-blog/">how to create a blog</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 Fzz Kiddy
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
