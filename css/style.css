@@ -589,7 +589,11 @@ a:hover {
 
 /* Backgroud image */
 #bg {
-  background-image: url("images/body.jpg");
+  background-image: url("images/body.gif");
+  /*-webkit-filter: blur(2px)	;*/
+  /*-webkit-filter: opacity(.7);*/
+  -webkit-filter:brightness(1.2) ;
+  -webkit-filter:saturate(1.5);
   background-color: #050a10;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1003,10 +1007,13 @@ article.sticky .featured-post {
 .entry-content code,
 .comment-content code {
     font-family: Consolas, Monaco, Lucida Console, monospace;
-    padding: 0 5px;
+    /*padding: 0 5px;*/
+    padding: 4px 5px;
     margin: 0 2px;
-    font-size: 0.9em;
-    border: 1px solid rgba(0, 0, 0, 0.24);
+    /*font-size: 0.9em;*/
+    /*border: 1px solid rgba(0, 0, 0, 0.24);*/
+    background-color: #f4ed32;
+    color: #e63bf5;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }

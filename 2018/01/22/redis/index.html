@@ -20,17 +20,17 @@ redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621
   
   <title>redis 基础学习 从安装到开发 | 网瘾少女--小双鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装em… 我也不记得我是怎么安装的了，这部分暂且不写就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。    启动 redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621 # Server initialized1668:M 23 Jan 10:56:01.622  DB loaded from disk:">
+  <meta name="description" content="安装em… 我也不记得我是怎么安装的了，这部分暂且不写就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。    启动 redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621 # Server initialized1668:M 23 Jan 10:56:01.622 * DB loaded from disk:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis 基础学习 从安装到开发">
 <meta property="og:url" content="http://fzzkiddy.github.io/2018/01/22/redis/index.html">
 <meta property="og:site_name" content="网瘾少女--小双鱼">
-<meta property="og:description" content="安装em… 我也不记得我是怎么安装的了，这部分暂且不写就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。    启动 redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621 # Server initialized1668:M 23 Jan 10:56:01.622  DB loaded from disk:">
+<meta property="og:description" content="安装em… 我也不记得我是怎么安装的了，这部分暂且不写就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。    启动 redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621 # Server initialized1668:M 23 Jan 10:56:01.622 * DB loaded from disk:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-23T08:07:33.000Z">
+<meta property="og:updated_time" content="2018-01-24T11:29:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis 基础学习 从安装到开发">
-<meta name="twitter:description" content="安装em… 我也不记得我是怎么安装的了，这部分暂且不写就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。    启动 redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621 # Server initialized1668:M 23 Jan 10:56:01.622  DB loaded from disk:">
+<meta name="twitter:description" content="安装em… 我也不记得我是怎么安装的了，这部分暂且不写就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。    启动 redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621 # Server initialized1668:M 23 Jan 10:56:01.622 * DB loaded from disk:">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -86,7 +86,7 @@ redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/22/redis/" data-id="cjcrjpkej0002n1s6zhk0jtkf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/22/redis/" data-id="cjcx2zr0i0005gus6dsbbl4jq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -98,7 +98,7 @@ redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621
 <hr>
 <ul>
 <li>启动<blockquote>
-<p>redis-server<br>当出现下图时，说明服务已启动<br>1668:M 23 Jan 10:56:01.621 # Server initialized<br>1668:M 23 Jan 10:56:01.622 <em> DB loaded from disk: 0.001 seconds<br>1668:M 23 Jan 10:56:01.622 </em> Ready to accept connections</p>
+<p>redis-server<br>当出现下图时，说明服务已启动<br>1668:M 23 Jan 10:56:01.621 # Server initialized<br>1668:M 23 Jan 10:56:01.622 * DB loaded from disk: 0.001 seconds<br>1668:M 23 Jan 10:56:01.622 * Ready to accept connections</p>
 </blockquote>
 </li>
 </ul>
@@ -137,6 +137,11 @@ redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621
 <li><p>创建 键 SET key 1</p>
 </li>
 <li>KEYS * 获取所有的键</li>
+<li>生成自增ID <ul>
+<li>关系数据库中 通过设置字段属性为 AUTO_INCREMENT 来实现</li>
+<li>Redis 中 对于每一类对象使用名为 对象类型(复数形式)： count 的键 ，如：(users: count), 来存储当前类型对象的数量，每增加一个新的对象时都使用INCR命令递增该键的值。由于使用INCR命令创建的值的初始键值为1，所以很容易得知，INCR命令的返回值既是加入该对象后的当前类型的对象总数，又是该新增对象的ID </li>
+</ul>
+</li>
 </ul>
 
       
@@ -192,23 +197,23 @@ redis-server当出现下图时，说明服务已启动1668:M 23 Jan 10:56:01.621
       <ul>
         
           <li>
+            <a href="/2018/01/27/JSX语句/">JSX语句</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/26/promiss/">es6 Promiss</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/23/新的文章/">新的文章</a>
+          </li>
+        
+          <li>
             <a href="/2018/01/23/mysql基本语句/">sql基本语句</a>
           </li>
         
           <li>
             <a href="/2018/01/22/redis/">redis 基础学习 从安装到开发</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/22/webpack/">webpack 学习</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/19/how-to-create-a-blog/">how to create a blog</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/19/hello-world/">Hello World</a>
           </li>
         
       </ul>
