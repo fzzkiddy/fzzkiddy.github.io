@@ -589,7 +589,7 @@ a:hover {
 
 /* Backgroud image */
 #bg {
-  background-image: url("images/body.jpg");
+  background-image: url("images/body1.jpg");
   /*-webkit-filter: blur(2px)	;*/
   /*-webkit-filter: opacity(.7);*/
   -webkit-filter:brightness(1.2) ;
