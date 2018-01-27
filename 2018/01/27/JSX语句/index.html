@@ -6,7 +6,12 @@
   
   <meta name="description" content="JSX 是 类XML 语法的ECMAScriptJSX的基本语法
 定义标签时，只允许被一个标签包裹
-标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写" />
+标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写
+大写是组件元素
+小写是DOM元素
+
+
+DOCTYPE 是一个非常特殊的标志。一般会在使用React作为服务端渲染时用到。  在HTM" />
   
 
   
@@ -17,17 +22,17 @@
   
   <title>JSX语句 | 网瘾少女--小双鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSX 是 类XML 语法的ECMAScriptJSX的基本语法 定义标签时，只允许被一个标签包裹 标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写">
+  <meta name="description" content="JSX 是 类XML 语法的ECMAScriptJSX的基本语法 定义标签时，只允许被一个标签包裹 标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写 大写是组件元素 小写是DOM元素   DOCTYPE 是一个非常特殊的标志。一般会在使用React作为服务端渲染时用到。  在HTML中，DOCTYPE 是没有闭合的，也就是说我们无法渲染它   元素的属性 class 和 for">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSX语句">
 <meta property="og:url" content="http://fzzkiddy.github.io/2018/01/27/JSX语句/index.html">
 <meta property="og:site_name" content="网瘾少女--小双鱼">
-<meta property="og:description" content="JSX 是 类XML 语法的ECMAScriptJSX的基本语法 定义标签时，只允许被一个标签包裹 标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写">
+<meta property="og:description" content="JSX 是 类XML 语法的ECMAScriptJSX的基本语法 定义标签时，只允许被一个标签包裹 标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写 大写是组件元素 小写是DOM元素   DOCTYPE 是一个非常特殊的标志。一般会在使用React作为服务端渲染时用到。  在HTML中，DOCTYPE 是没有闭合的，也就是说我们无法渲染它   元素的属性 class 和 for">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-27T07:27:22.000Z">
+<meta property="og:updated_time" content="2018-01-27T10:37:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSX语句">
-<meta name="twitter:description" content="JSX 是 类XML 语法的ECMAScriptJSX的基本语法 定义标签时，只允许被一个标签包裹 标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写">
+<meta name="twitter:description" content="JSX 是 类XML 语法的ECMAScriptJSX的基本语法 定义标签时，只允许被一个标签包裹 标签一定要闭合元素类型DOM元素和组件元素对应规则为 首字母大小写 大写是组件元素 小写是DOM元素   DOCTYPE 是一个非常特殊的标志。一般会在使用React作为服务端渲染时用到。  在HTML中，DOCTYPE 是没有闭合的，也就是说我们无法渲染它   元素的属性 class 和 for">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -83,7 +88,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/27/JSX语句/" data-id="cjcx3aw7t0000iecdyfrxhaxc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/27/JSX语句/" data-id="cjcx0s7xx0007d7s6wnqjl9tw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -92,8 +97,30 @@
         <h1 id="JSX-是-类XML-语法的ECMAScript"><a href="#JSX-是-类XML-语法的ECMAScript" class="headerlink" title="JSX 是 类XML 语法的ECMAScript"></a>JSX 是 类XML 语法的ECMAScript</h1><h2 id="JSX的基本语法"><a href="#JSX的基本语法" class="headerlink" title="JSX的基本语法"></a>JSX的基本语法</h2><ol>
 <li>定义标签时，只允许被一个标签包裹</li>
 <li>标签一定要闭合<h2 id="元素类型"><a href="#元素类型" class="headerlink" title="元素类型"></a>元素类型</h2>DOM元素和组件元素<br>对应规则为 <code>首字母大小写</code></li>
+<li>大写是组件元素</li>
+<li>小写是DOM元素</li>
 </ol>
-
+<ul>
+<li>DOCTYPE 是一个非常特殊的标志。一般会在使用React作为服务端渲染时用到。<br>  <strong>在HTML中，DOCTYPE 是没有闭合的，也就是说我们无法渲染它</strong></li>
+</ul>
+<hr>
+<h2 id="元素的属性"><a href="#元素的属性" class="headerlink" title="元素的属性"></a>元素的属性</h2><ul>
+<li>class 和 for 在 javascript 中都是关键词，所以 我们元素的class 和 for 属性要转换为 className 和 htmlFor</li>
+<li>组件的属性 完全自定义，<code>可以理解为实现组件的自定义参数</code><br>  <code>在写自定义属性的时候，都由标准写法改为小驼峰写法</code></li>
+<li>展开属性。如果你不知道要设置哪些props 。那么最好先不要设置 它。<h2 id="render-方法，是React-组件生命周期的一部分，也是最核心的函数之一"><a href="#render-方法，是React-组件生命周期的一部分，也是最核心的函数之一" class="headerlink" title="render 方法，是React 组件生命周期的一部分，也是最核心的函数之一"></a>render 方法，是React 组件生命周期的一部分，也是最核心的函数之一</h2><h2 id="HTML-转义"><a href="#HTML-转义" class="headerlink" title="HTML 转义"></a>HTML 转义</h2></li>
+<li>React会奖所有要显示到DOM的字符串转义，防止<a href="https://baike.baidu.com/item/xss/917356?fr=aladdin" target="_blank" rel="noopener">XSS</a><ol>
+<li>直接使用utf-8 字符 &copy;</li>
+<li>使用对应字符的Unicode编码查询编码</li>
+<li>使用数组组装 <code>&lt;div&gt;{[&#39;cc &#39;,&lt;span&gt;&amp;copy;&lt;/span&gt;,&#39; 2018&#39;]}&lt;/div&gt;</code></li>
+<li>直接插入原始的HTML<ol>
+<li>此外React 提供了dangerouslySetInnerHTML属性<br>它的作用就是避免React转义字符，在确定必要的情况下可以使用它</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="React-组件"><a href="#React-组件" class="headerlink" title="React 组件"></a>React 组件</h2>
       
     </div><!-- .entry-content -->
 
