@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="组件
+&amp;lt;BrowserRouter&amp;gt;一个使用了 HTML5 history API 的高阶路由组件，保证你的 UI 界面和 URL 保持同步。此组件拥有以下属性：basename: string作用：为所有位置添加一个基准URL使用场景：假如你需要把页面部署到服务器的二级目录，你可以使用" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>关于Router and Route | 网瘾少女--小双鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="组件 &amp;lt;BrowserRouter&amp;gt;一个使用了 HTML5 history API 的高阶路由组件，保证你的 UI 界面和 URL 保持同步。此组件拥有以下属性：basename: string作用：为所有位置添加一个基准URL使用场景：假如你需要把页面部署到服务器的二级目录，你可以使用 basename 设置到此目录。&amp;lt;BrowserRouter basename=&amp;quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Router and Route">
+<meta property="og:url" content="http://fzzkiddy.github.io/2018/02/10/Router/index.html">
+<meta property="og:site_name" content="网瘾少女--小双鱼">
+<meta property="og:description" content="组件 &amp;lt;BrowserRouter&amp;gt;一个使用了 HTML5 history API 的高阶路由组件，保证你的 UI 界面和 URL 保持同步。此组件拥有以下属性：basename: string作用：为所有位置添加一个基准URL使用场景：假如你需要把页面部署到服务器的二级目录，你可以使用 basename 设置到此目录。&amp;lt;BrowserRouter basename=&amp;quot;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-10T06:29:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于Router and Route">
+<meta name="twitter:description" content="组件 &amp;lt;BrowserRouter&amp;gt;一个使用了 HTML5 history API 的高阶路由组件，保证你的 UI 界面和 URL 保持同步。此组件拥有以下属性：basename: string作用：为所有位置添加一个基准URL使用场景：假如你需要把页面部署到服务器的二级目录，你可以使用 basename 设置到此目录。&amp;lt;BrowserRouter basename=&amp;quot;">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="网瘾少女--小双鱼" rel="home">网瘾少女--小双鱼</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">猫系少女～好养=。= Tiramisu~</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="关于route-Router" class="关于route-Router post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      关于Router and Route
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/02/10/Router/" data-id="cjdgyjhwh0002w5cd3wyf4pm1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><ul>
+<li><code>&lt;BrowserRouter&gt;</code><br>一个使用了 HTML5 history API 的高阶路由组件，保证你的 UI 界面和 URL 保持同步。此组件拥有以下属性：<br>basename: string<br>作用：为所有位置添加一个基准URL<br>使用场景：假如你需要把页面部署到服务器的二级目录，你可以使用 basename 设置到此目录。<pre><code>&lt;BrowserRouter basename=&quot;/minooo&quot; /&gt;
+ &lt;Link to=&quot;/react&quot; /&gt; 
+ // 最终渲染为 &lt;a href=&quot;/minooo/react&quot;&gt;
+</code></pre><ul>
+<li><code>getUserConfirmation: func</code><br>作用：导航到此页面前执行的函数，默认使用 window.confirm<br>使用场景：当需要用户进入页面前执行什么操作时可用，不过一般用到的不多。<br>  const getConfirmation = (message, callback) =&gt; {<pre><code>  const allowTransition = window.confirm(message)
+  callback(allowTransition)}
+&lt;BrowserRouter getUserConfirmation={getConfirmation(&apos;Are you sure?&apos;, yourCallBack)} /&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p><code>&lt;Route&gt;</code><br>  自带三个 render method 和三个 props</p>
+<p>  render methods 分别是：</p>
+<ul>
+<li>&lt;Route component&gt;</li>
+<li>&lt;Route render&gt;</li>
+<li><p>&lt;Route children&gt;</p>
+<p>props 分别是：</p>
+</li>
+<li>match</li>
+<li>location</li>
+<li><p>history</p>
+<p>所有的 render method 无一例外都将被传入这些 props</p>
+<p>component<br>  只有当访问地址和路由匹配时，一个React component 才会被渲染，此时此组件接受 route props（match，loction，history）</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/02/10/Router/">
+    <time datetime="2018-02-10T06:04:05.000Z" class="entry-date">
+        2018-02-10
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/01/27/JSX语句/" rel="next">JSX语句 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/10/Router/">关于Router and Route</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/27/JSX语句/">JSX语句</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/26/promiss/">es6 Promiss</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/23/新的文章/">新的文章</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/23/mysql基本语句/">sql基本语句</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 Fzz Kiddy
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
