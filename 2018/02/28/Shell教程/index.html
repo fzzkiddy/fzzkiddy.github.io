@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="新建文件touch  文件名
+新建文件夹mkdir  文件
+运行shell脚本./test.sh
+  注意，一定要写成 ./test.sh，而不是 test.sh，运行其它二进制的程序也一样，直接写 test.sh，linux 系统会去 PATH 里寻找有没有叫 test.sh 的，而只有 /bin" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Shell教程 | 网瘾少女--小双鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="新建文件touch  文件名 新建文件夹mkdir  文件 运行shell脚本./test.sh   注意，一定要写成 ./test.sh，而不是 test.sh，运行其它二进制的程序也一样，直接写 test.sh，linux 系统会去 PATH 里寻找有没有叫 test.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell教程">
+<meta property="og:url" content="http://fzzkiddy.github.io/2018/02/28/Shell教程/index.html">
+<meta property="og:site_name" content="网瘾少女--小双鱼">
+<meta property="og:description" content="新建文件touch  文件名 新建文件夹mkdir  文件 运行shell脚本./test.sh   注意，一定要写成 ./test.sh，而不是 test.sh，运行其它二进制的程序也一样，直接写 test.sh，linux 系统会去 PATH 里寻找有没有叫 test.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 P">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-28T10:56:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shell教程">
+<meta name="twitter:description" content="新建文件touch  文件名 新建文件夹mkdir  文件 运行shell脚本./test.sh   注意，一定要写成 ./test.sh，而不是 test.sh，运行其它二进制的程序也一样，直接写 test.sh，linux 系统会去 PATH 里寻找有没有叫 test.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 P">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="网瘾少女--小双鱼" rel="home">网瘾少女--小双鱼</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">猫系少女～好养=。= Tiramisu~</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Shell教程" class="post-Shell教程 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Shell教程
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/02/28/Shell教程/" data-id="cjjdoe6xf0004qkcdgbabwii4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h3><pre><code>touch  文件名
+</code></pre><h3 id="新建文件夹"><a href="#新建文件夹" class="headerlink" title="新建文件夹"></a>新建文件夹</h3><pre><code>mkdir  文件
+</code></pre><h3 id="运行shell脚本"><a href="#运行shell脚本" class="headerlink" title="运行shell脚本"></a>运行shell脚本</h3><pre><code>./test.sh
+</code></pre><p>  注意，一定要写成 ./test.sh，而不是 test.sh，运行其它二进制的程序也一样，直接写 test.sh，linux 系统会去 PATH 里寻找有没有叫 test.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 PATH 里，所以写成 test.sh 是会找不到命令的，要用 ./test.sh 告诉系统说，就在当前目录找。</p>
+<ul>
+<li>作为可执行程序<pre><code>chmod +x ./test.sh  #使脚本具有执行权限
+./test.sh  #执行脚本
+</code></pre></li>
+<li>作为解释器参数<br>这种方式运行的脚本，不需要在第一行指定解释器信息，写了也没用。<pre><code>  /bin/sh test.sh
+/bin/php test.php
+</code></pre></li>
+</ul>
+<h3 id="Shell-变量"><a href="#Shell-变量" class="headerlink" title="Shell 变量"></a>Shell 变量</h3><blockquote>
+<p>your_name=”runoob.com”</p>
+</blockquote>
+<p>  变量名和等号之间不能有空格</p>
+<ul>
+<li><p>变量名的命名须遵循如下规则：</p>
+<p>命名只能使用英文字母，数字和下划线，首个字符不能以数字开头。<br>中间不能有空格，可以使用下划线（_）。<br>不能使用标点符号。<br>不能使用bash里的关键字（可用help命令查看保留关键字）。</p>
+</li>
+<li>有效的变量名<blockquote>
+<p>RUNOOB<br>LD_LIBRARY_PATH<br>_var<br>var2</p>
+</blockquote>
+</li>
+<li>无效的变量名<blockquote>
+<p>?var=123<br>user*name=runoob</p>
+</blockquote>
+</li>
+<li>除了显式地直接赋值，还可以用语句给变量赋值，如:<blockquote>
+<p>for file in <code>ls /etc</code><br>  以上语句将 /etc 下目录的文件名循环出来</p>
+</blockquote>
+</li>
+<li>使用变量<br>使用一个定义过的变量，只要在变量名前面加美元符号即可，如：<blockquote>
+<p>your_name=”qinjx”<br>echo $your_name<br>echo ${your_name}<br>变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界，比如下面这种情况</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/02/28/Shell教程/">
+    <time datetime="2018-02-28T10:36:25.000Z" class="entry-date">
+        2018-02-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2018/03/02/版本控制/" rel="prev"><span class="meta-nav">←</span> node版本控制</a></span>
+    
+    
+        <span class="nav-next"><a href="/2018/02/10/Router/" rel="next">关于Router and Route <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/23/React-router/">React_router</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/21/redux/">redux</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/02/版本控制/">node版本控制</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/28/Shell教程/">Shell教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/10/Router/">关于Router and Route</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 Fzz Kiddy
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

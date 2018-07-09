@@ -18,17 +18,17 @@ Promise.prototype.then() VS Promise.prot" />
   
   <title>es6 Promiss | 网瘾少女--小双鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="真的感觉到学的越多，懂得越少。。。Promiss 是异步编程的一种解决方案，它有三种状态    pending-进行中    resolved-已完成    rejected-已失败 状态一旦改变，就无法再次改变状态  Promise.prototype.then() VS Promise.prototype.catch()">
+  <meta name="description" content="真的感觉到学的越多，懂得越少。。。Promiss 是异步编程的一种解决方案，它有三种状态    pending-进行中    resolved-已完成    rejected-已失败 状态一旦改变，就无法再次改变状态  Promise.prototype.then() VS Promise.prototype.catch() new Promise &amp;amp; Promise.resolve()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="es6 Promiss">
 <meta property="og:url" content="http://fzzkiddy.github.io/2018/01/26/promiss/index.html">
 <meta property="og:site_name" content="网瘾少女--小双鱼">
-<meta property="og:description" content="真的感觉到学的越多，懂得越少。。。Promiss 是异步编程的一种解决方案，它有三种状态    pending-进行中    resolved-已完成    rejected-已失败 状态一旦改变，就无法再次改变状态  Promise.prototype.then() VS Promise.prototype.catch()">
+<meta property="og:description" content="真的感觉到学的越多，懂得越少。。。Promiss 是异步编程的一种解决方案，它有三种状态    pending-进行中    resolved-已完成    rejected-已失败 状态一旦改变，就无法再次改变状态  Promise.prototype.then() VS Promise.prototype.catch() new Promise &amp;amp; Promise.resolve()">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-26T12:46:03.000Z">
+<meta property="og:updated_time" content="2018-04-08T14:25:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6 Promiss">
-<meta name="twitter:description" content="真的感觉到学的越多，懂得越少。。。Promiss 是异步编程的一种解决方案，它有三种状态    pending-进行中    resolved-已完成    rejected-已失败 状态一旦改变，就无法再次改变状态  Promise.prototype.then() VS Promise.prototype.catch()">
+<meta name="twitter:description" content="真的感觉到学的越多，懂得越少。。。Promiss 是异步编程的一种解决方案，它有三种状态    pending-进行中    resolved-已完成    rejected-已失败 状态一旦改变，就无法再次改变状态  Promise.prototype.then() VS Promise.prototype.catch() new Promise &amp;amp; Promise.resolve()">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -84,7 +84,7 @@ Promise.prototype.then() VS Promise.prot" />
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/26/promiss/" data-id="cjdgyjhwq0006w5cd19hrpvlq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/26/promiss/" data-id="cjjdoe6xk0009qkcduta1ytmy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -94,6 +94,48 @@ Promise.prototype.then() VS Promise.prot" />
 <pre><code>状态一旦改变，就无法再次改变状态
 </code></pre><hr>
 <p>Promise.prototype.then() VS Promise.prototype.catch()</p>
+<h1 id="new-Promise-amp-Promise-resolve"><a href="#new-Promise-amp-Promise-resolve" class="headerlink" title="new Promise &amp; Promise.resolve()"></a>new Promise &amp; Promise.resolve()</h1><ul>
+<li>Promise 异步机制<br>then 方法每次都会返回 Promise 实例对象<pre><code>function new_promise_resolve(){
+    return new Promise((resolve,reject) =&gt; {
+        resolve(); // 这里调用 resolve
+        console.log(&apos;resolve里面的log&apos;)
+    })
+}
+promise_resolve().then(()=&gt;{
+    console.log(&apos;then方法&apos;)
+})
+//先输出 resolve里面的log
+//后输出 then方法
+//这里很好地体现了 Promise实现了 node.js的异步机制
+</code></pre></li>
+<li><p>使用Promise.resolve())        </p>
+<pre><code>function promise_resolve(){
+    let promise = Promise.resolve();
+    promise.then(()=&gt;{
+        console.log(&apos;promise_resolve1&apos;)
+    }).then(()=&gt;{
+        console.log(&apos;promise_resolve2&apos;)
+    })
+    return promise
+}
+</code></pre></li>
+<li><p>通过 then 将 参数传递到下一个 then</p>
+<pre><code>function promise_forEach_then() {
+   let ids = [1,2,3];
+   let promise = Promise.resolve();
+   ids.forEach((id) =&gt; {
+      promise
+      .then(() =&gt; {
+         return {id}
+      })
+      .then(consoleLogId)
+   });
+}
+function consoleLogId(id){
+    console.log(&apos;promise_forEach_then---&apos; + id);
+}
+</code></pre></li>
+</ul>
 
       
     </div><!-- .entry-content -->
@@ -148,23 +190,23 @@ Promise.prototype.then() VS Promise.prot" />
       <ul>
         
           <li>
+            <a href="/2018/03/23/React-router/">React_router</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/21/redux/">redux</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/02/版本控制/">node版本控制</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/28/Shell教程/">Shell教程</a>
+          </li>
+        
+          <li>
             <a href="/2018/02/10/Router/">关于Router and Route</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/27/JSX语句/">JSX语句</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/26/promiss/">es6 Promiss</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/23/新的文章/">新的文章</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/23/mysql基本语句/">sql基本语句</a>
           </li>
         
       </ul>
