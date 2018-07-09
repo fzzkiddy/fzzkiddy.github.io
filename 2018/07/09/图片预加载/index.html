@@ -4,19 +4,9 @@
   <meta charset="utf-8">
   
   
-  <meta name="description" content="node 版本安装
-使用npm 安装一个模块 n 到全局
-npm  install  -g  n
+  <meta name="description" content="Skeleton Screen的由来 加载占位图javascript，创建Image对象，然后把这些对象的src属性设置成要 加载的图片地址也能触发浏览器加载图片，利用这一点就能实现图片预加载的功能
 
-
-使用 n 加版本号 就可以安装其他版本了
-sudo n 6.1.0mac 需要sudo 权限
-
-
-
-node 多版本切换
-查看node版本
-n(前面有个o)你可以通过移动上下方向键来选择要使用的版本" />
+图片加载问题  a. 进度问题  进度条设置 ： 已加载文件数／总的文件数  b. 图片加载失败的" />
   
 
   
@@ -25,19 +15,21 @@ n(前面有个o)你可以通过移动上下方向键来选择要使用的版本"
   
   
   
-  <title>node版本控制 | 网瘾少女--小双鱼</title>
+  <title>图片预加载 | 网瘾少女--小双鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="node 版本安装 使用npm 安装一个模块 n 到全局 npm  install  -g  n   使用 n 加版本号 就可以安装其他版本了 sudo n 6.1.0mac 需要sudo 权限    node 多版本切换 查看node版本 n(前面有个o)你可以通过移动上下方向键来选择要使用的版本，最后按回车生效。n   0.10.10.10.15o   0.10.1   0.11.8    安">
+  <meta name="description" content="Skeleton Screen的由来 加载占位图javascript，创建Image对象，然后把这些对象的src属性设置成要 加载的图片地址也能触发浏览器加载图片，利用这一点就能实现图片预加载的功能  图片加载问题  a. 进度问题  进度条设置 ： 已加载文件数／总的文件数  b. 图片加载失败的问题  图片加载失败时，不应该影响加载器功能  c. 图片加载超时问题  图片不能加载太久，否则用户">
 <meta property="og:type" content="article">
-<meta property="og:title" content="node版本控制">
-<meta property="og:url" content="http://fzzkiddy.github.io/2018/03/02/版本控制/index.html">
+<meta property="og:title" content="图片预加载">
+<meta property="og:url" content="http://fzzkiddy.github.io/2018/07/09/图片预加载/index.html">
 <meta property="og:site_name" content="网瘾少女--小双鱼">
-<meta property="og:description" content="node 版本安装 使用npm 安装一个模块 n 到全局 npm  install  -g  n   使用 n 加版本号 就可以安装其他版本了 sudo n 6.1.0mac 需要sudo 权限    node 多版本切换 查看node版本 n(前面有个o)你可以通过移动上下方向键来选择要使用的版本，最后按回车生效。n   0.10.10.10.15o   0.10.1   0.11.8    安">
+<meta property="og:description" content="Skeleton Screen的由来 加载占位图javascript，创建Image对象，然后把这些对象的src属性设置成要 加载的图片地址也能触发浏览器加载图片，利用这一点就能实现图片预加载的功能  图片加载问题  a. 进度问题  进度条设置 ： 已加载文件数／总的文件数  b. 图片加载失败的问题  图片加载失败时，不应该影响加载器功能  c. 图片加载超时问题  图片不能加载太久，否则用户">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-02T03:58:32.000Z">
+<meta property="og:image" content="http://fzzkiddy.github.io/2018/07/09/img/loadImg/1.png">
+<meta property="og:updated_time" content="2018-07-09T07:40:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node版本控制">
-<meta name="twitter:description" content="node 版本安装 使用npm 安装一个模块 n 到全局 npm  install  -g  n   使用 n 加版本号 就可以安装其他版本了 sudo n 6.1.0mac 需要sudo 权限    node 多版本切换 查看node版本 n(前面有个o)你可以通过移动上下方向键来选择要使用的版本，最后按回车生效。n   0.10.10.10.15o   0.10.1   0.11.8    安">
+<meta name="twitter:title" content="图片预加载">
+<meta name="twitter:description" content="Skeleton Screen的由来 加载占位图javascript，创建Image对象，然后把这些对象的src属性设置成要 加载的图片地址也能触发浏览器加载图片，利用这一点就能实现图片预加载的功能  图片加载问题  a. 进度问题  进度条设置 ： 已加载文件数／总的文件数  b. 图片加载失败的问题  图片加载失败时，不应该影响加载器功能  c. 图片加载超时问题  图片不能加载太久，否则用户">
+<meta name="twitter:image" content="http://fzzkiddy.github.io/2018/07/09/img/loadImg/1.png">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -78,7 +70,7 @@ n(前面有个o)你可以通过移动上下方向键来选择要使用的版本"
     </nav>
 </header>
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main"><article id="node-版本控制" class="node-版本控制 post type-post status-publish format-standard hentry">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-图片预加载" class="post-图片预加载 post type-post status-publish format-standard hentry">
     <!---->
 
       <header class="entry-header">
@@ -86,62 +78,31 @@ n(前面有个o)你可以通过移动上下方向键来选择要使用的版本"
         
   
     <h1 class="entry-title article-title">
-      node版本控制
+      图片预加载
     </h1>
   
 
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/03/02/版本控制/" data-id="cjjdygbi9000c56cdpuvbzsps" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/07/09/图片预加载/" data-id="cjjdygbi5000856cd860rommf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <h1 id="node-版本安装"><a href="#node-版本安装" class="headerlink" title="node 版本安装"></a>node 版本安装</h1><ul>
-<li>使用npm 安装一个模块 n 到全局<blockquote>
-<p>npm  install  -g  n</p>
-</blockquote>
-</li>
-<li>使用 n 加版本号 就可以安装其他版本了<blockquote>
-<p>sudo n 6.1.0<br>mac 需要sudo 权限</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="node-多版本切换"><a href="#node-多版本切换" class="headerlink" title="node 多版本切换"></a>node 多版本切换</h1><ul>
-<li>查看node版本<blockquote>
-<p>n<br>(前面有个o)<br>你可以通过移动上下方向键来选择要使用的版本，最后按回车生效。<br>n </p>
-<blockquote>
-<p>0.10.1<br>0.10.15<br>o<br>   0.10.1<br>   0.11.8</p>
-</blockquote>
-</blockquote>
-</li>
-<li>安装最新版本<blockquote>
-<p>n latest</p>
-</blockquote>
-</li>
-<li>安装稳定版本<blockquote>
-<p>n stable</p>
-</blockquote>
-</li>
-<li>删除某个版本<blockquote>
-<p>n rm 0.10.1</p>
-</blockquote>
-</li>
-<li>以指定的版本来执行版本<blockquote>
-<p>n use 0.10.21 some.js</p>
-</blockquote>
-</li>
+        <h3 id="Skeleton-Screen的由来-加载占位图"><a href="#Skeleton-Screen的由来-加载占位图" class="headerlink" title="Skeleton Screen的由来 加载占位图"></a>Skeleton Screen的由来 加载占位图</h3><p>javascript，创建Image对象，然后把这些对象的src属性设置成要 加载的图片地址也能触发浏览器加载图片，利用这一点就能实现图片预加载的功能</p>
+<ul>
+<li>图片加载问题<br>  a. 进度问题<br>  进度条设置 ： 已加载文件数／总的文件数<br>  b. 图片加载失败的问题<br>  图片加载失败时，不应该影响加载器功能<br>  c. 图片加载超时问题<br>  图片不能加载太久，否则用户一直停留在加载效果上，看不到主内容。应该给每个图片设置一个加载的超时时间。如果图片正在超时时间之后，还没有加载完，就该主动放弃加载，通知外部上下文加载完毕，显示主内容。<br>  <img src="../img/loadImg/1.png"></li>
 </ul>
 
       
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-    <a href="/2018/03/02/版本控制/">
-    <time datetime="2018-03-02T03:44:40.000Z" class="entry-date">
-        2018-03-02
+    <a href="/2018/07/09/图片预加载/">
+    <time datetime="2018-07-09T02:58:58.000Z" class="entry-date">
+        2018-07-09
     </time>
 </a>
     
@@ -154,10 +115,8 @@ n(前面有个o)你可以通过移动上下方向键来选择要使用的版本"
 <nav class="nav-single">
     <h3 class="assistive-text">文章导航</h3>
     
-        <span class="nav-previous"><a href="/2018/03/21/redux/" rel="prev"><span class="meta-nav">←</span> redux</a></span>
     
-    
-        <span class="nav-next"><a href="/2018/02/28/Shell教程/" rel="next">Shell教程 <span class="meta-nav">→</span></a></span>
+        <span class="nav-next"><a href="/2018/03/23/React-router/" rel="next">React_router <span class="meta-nav">→</span></a></span>
     
 </nav><!-- .nav-single -->
 

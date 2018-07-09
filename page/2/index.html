@@ -62,6 +62,99 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-redis" class="post-redis post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/01/22/redis/">redis 基础学习 从安装到开发</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/22/redis/" data-id="cjjdygbi6000a56cd4ovqcjda" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <ul>
+<li>安装<br>em… 我也不记得我是怎么安装的了，这部分暂且不写<br>就从系统已经有了redis 环境开始写起吧…对于如何安装redis 请翻阅他人博客。。</li>
+</ul>
+<hr>
+<ul>
+<li>启动<blockquote>
+<p>redis-server<br>当出现下图时，说明服务已启动<br>1668:M 23 Jan 10:56:01.621 # Server initialized<br>1668:M 23 Jan 10:56:01.622 * DB loaded from disk: 0.001 seconds<br>1668:M 23 Jan 10:56:01.622 * Ready to accept connections</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<ul>
+<li>启动本地服务<br>默认 6379 端口  通过 –post 可以自定义端口<blockquote>
+<p>redis-server –port 6380</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="通过脚本启动"><a href="#通过脚本启动" class="headerlink" title="* 通过脚本启动"></a>* 通过脚本启动</h2><ul>
+<li>发送命令<br>Redis 通过PING 命令来确定客户端与Redis 是否连接正常，如果连接正常会收到PONG</li>
+<li>命令返回值<blockquote>
+<ul>
+<li>状态回复<ol>
+<li>ok</li>
+</ol>
+</li>
+<li>错误回复<br>  (ERROR)</li>
+<li>整数回复<br>  (integer) 0</li>
+<li>字符串回复<br>  “1”<br>  请求的键值不存在时返回一个空结果<br>  （nil） </li>
+<li>多行字符串返回</li>
+</ul>
+</blockquote>
+</li>
+<li><p>配置</p>
+<ol>
+<li>在不重新启动 Redis 的情况下，动态修改部分Redis配置</li>
+<li>获得当前的配置活动情况 <blockquote>
+<p>CONFIG GET loglevel<br> 1）”loglevel”<br> 2) “warning”<br> 第一行字符串回复的表示选项名 、第二行字符串回复表示选项值<br>SELECT table 切换数据库<br><strong>Redis不支持自定义数据库名，每个数据库都以编号命名，并且不支持分别设置密码，要么能 全部访问，要么一个数据库也访问不了</strong></p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>创建 键 SET key 1</p>
+</li>
+<li>KEYS * 获取所有的键</li>
+<li>生成自增ID <ul>
+<li>关系数据库中 通过设置字段属性为 AUTO_INCREMENT 来实现</li>
+<li>Redis 中 对于每一类对象使用名为 对象类型(复数形式)： count 的键 ，如：(users: count), 来存储当前类型对象的数量，每增加一个新的对象时都使用INCR命令递增该键的值。由于使用INCR命令创建的值的初始键值为1，所以很容易得知，INCR命令的返回值既是加入该对象后的当前类型的对象总数，又是该新增对象的ID </li>
+</ul>
+</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/01/22/redis/">
+    <time datetime="2018-01-22T07:47:03.000Z" class="entry-date">
+        2018-01-22
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-webpack" class="post-webpack post type-post status-publish format-standard hentry">
     <!---->
 
@@ -77,7 +170,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/22/webpack/" data-id="cjjdoe6xl000aqkcdokigosik" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/22/webpack/" data-id="cjjdygbi8000b56cd4zc3i25x" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -131,7 +224,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/19/how-to-create-a-blog/" data-id="cjjdoe6xh0006qkcdi094ns7i" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/19/how-to-create-a-blog/" data-id="cjjdygbi1000456cd6efhr7c8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -175,7 +268,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/19/hello-world/" data-id="cjjdoe6xe0003qkcd530mmeye" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/01/19/hello-world/" data-id="cjjdygbi0000356cdjc0ds353" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -240,6 +333,10 @@
       <ul>
         
           <li>
+            <a href="/2018/07/09/图片预加载/">图片预加载</a>
+          </li>
+        
+          <li>
             <a href="/2018/03/23/React-router/">React_router</a>
           </li>
         
@@ -253,10 +350,6 @@
         
           <li>
             <a href="/2018/02/28/Shell教程/">Shell教程</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/10/Router/">关于Router and Route</a>
           </li>
         
       </ul>
