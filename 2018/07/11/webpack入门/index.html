@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="— title: webpack入门date: 2018-07-09 18:10:19
+tags: webpack 小白初学笔记
+什么是webpack  对webpack 的通俗解释：模块打包机    分析项目结构，找到JavaScript模块以及其他一些浏览器不能直接运行的拓展语言（Scss, T" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>网瘾少女--小双鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="— title: webpack入门date: 2018-07-09 18:10:19 tags: webpack 小白初学笔记 什么是webpack  对webpack 的通俗解释：模块打包机    分析项目结构，找到JavaScript模块以及其他一些浏览器不能直接运行的拓展语言（Scss, TypeScript等），将其转换和打包为合适的格式共浏览器使用。  webpack 的工作方式： 把">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网瘾少女--小双鱼">
+<meta property="og:url" content="http://fzzkiddy.github.io/2018/07/11/webpack入门/index.html">
+<meta property="og:site_name" content="网瘾少女--小双鱼">
+<meta property="og:description" content="— title: webpack入门date: 2018-07-09 18:10:19 tags: webpack 小白初学笔记 什么是webpack  对webpack 的通俗解释：模块打包机    分析项目结构，找到JavaScript模块以及其他一些浏览器不能直接运行的拓展语言（Scss, TypeScript等），将其转换和打包为合适的格式共浏览器使用。  webpack 的工作方式： 把">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-11T03:06:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网瘾少女--小双鱼">
+<meta name="twitter:description" content="— title: webpack入门date: 2018-07-09 18:10:19 tags: webpack 小白初学笔记 什么是webpack  对webpack 的通俗解释：模块打包机    分析项目结构，找到JavaScript模块以及其他一些浏览器不能直接运行的拓展语言（Scss, TypeScript等），将其转换和打包为合适的格式共浏览器使用。  webpack 的工作方式： 把">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="网瘾少女--小双鱼" rel="home">网瘾少女--小双鱼</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">猫系少女～好养=。= Tiramisu~</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-webpack入门" class="post-webpack入门 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://fzzkiddy.github.io/2018/07/11/webpack入门/" data-id="ck5nh1p0e000ei2cdo0afy8ov" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>— title: webpack入门<br>date: 2018-07-09 18:10:19</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p> webpack 小白初学笔记</p>
+<h4 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack"></a>什么是webpack</h4><p>  对webpack 的通俗解释：<code>模块打包机</code><br>    分析项目结构，找到JavaScript模块以及其他一些浏览器不能直接运行的拓展语言（Scss, TypeScript等），将其转换和打包为合适的格式共浏览器使用。<br>  webpack 的工作方式： 把你的项目当作一个整体，通过一个给定的主文件（如：index.js）, Webpack 将从这个文件开始找到你项目的所有依赖文件，使用loaders处理它们。最后打包为一个或多个浏览器可识别的JavaScript文件。</p>
+<h3 id="使用webpack"><a href="#使用webpack" class="headerlink" title="使用webpack"></a>使用webpack</h3><pre><code>// 全局安装
+npm install -g webpack
+// 安装到项目目录
+npm install --save-dev webpack
+// 前提是项目中有package.json 文件
+</code></pre><hr>
+<p>npm的start命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用npm start就可以执行其对于的命令，如果对应的此脚本名称不是start，想要在命令行中运行时，需要这样用npm run {script name}如npm run build，我们在命令行中输入npm start试试，输出结果如下    </p>
+<blockquote>
+<p>注：“__dirname”是node.js中的一个全局变量，它指向当前执行脚本所在的目录。</p>
+</blockquote>
+<p>浏览器监听代码修改，</p>
+<blockquote>
+<p>npm install –save-dev webpack-dev-server</p>
+</blockquote>
+<hr>
+<ul>
+<li>ExtractTextPlugin：分离CSS和JS文件<blockquote>
+<p>npm install –save-dev extract-text-webpack-plugin</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/07/11/webpack入门/">
+    <time datetime="2018-07-11T03:06:46.000Z" class="entry-date">
+        2018-07-11
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2020/01/21/2020年终总结/" rel="prev"><span class="meta-nav">←</span> 2020年终总结</a></span>
+    
+    
+        <span class="nav-next"><a href="/2018/07/10/CommonJs/" rel="next">CommonJs <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/21/2020年终总结/">2020年终总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/11/webpack入门/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/10/CommonJs/">CommonJs</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/09/npm/">npm</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/09/图片预加载/">图片预加载</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 Fzz Kiddy
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
